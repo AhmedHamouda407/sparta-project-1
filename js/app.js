@@ -12,20 +12,21 @@ document.addEventListener('DOMContentLoaded', function(){
   // testing random words
 
   console.log('working')
-  var wordarray = ['march', 'cake', 'cpu'];
+  var wordarray = ['linux', 'ctf', 'ram', 'hack', 'stuxnet'];
   var randomword = wordarray[Math.floor(Math.random() * wordarray.length)]
   var guessarray =['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
   var randomstoredword = [];
   randomstoredword.push(randomword)
   var randomswordletters = randomword.split("")
   var randomlettersstored= [];
-  var score = 10
-  document.getElementById("scoreCounter").innerHTML = score
+  var Guesses = 5
+  document.getElementById("scoreCounter").innerHTML = Guesses
   randomlettersstored.push(randomswordletters)
 
 
   var userinputstored=[];
-  userinputstored.push(document.getElementById("letter").value)
+  var userinput=document.getElementById("letter")
+  userinputstored.push(userinput.value)
   console.log(userinputstored);
 
 
@@ -49,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function(){
     li.innerHTML= randomword[i];
     ul.appendChild(li);
   }
-//letter+output result, if correct, turn red
+//letter+output result, if correct, turn letter red
   document.getElementById("hangman").addEventListener("submit", function(e){
     e.preventDefault();
     for(let i=0; i<randomlettersstored.length; i++){
@@ -62,12 +63,14 @@ document.addEventListener('DOMContentLoaded', function(){
         document.getElementById("list").children[colourKid].style.color = 'red';
       } if (!randomlettersstored[i].includes(value)) {
         alert('incorrectletter'),
-        score--
-        console.log("score", score)
+        Guesses--
+        console.log("score", Guesses)
         document.getElementById("scoreCounter").innerHTML = score
       } else {
         console.log("awwww")
       }
+    }if (Guesses===0){
+      alert('unlucky, start another game')
     }
   });
 

@@ -10,15 +10,16 @@
 </head>
 <body>
   <h1> Hangman Game</h1>
+  <p>Instructions: Try to guess the letters needed to assemble typical computing and cybersecurity terms.</p>
   <div class="score">
-    <div>Score: </div>
+    <div>Guesses Remaining: </div>
     <div id="scoreCounter"></div>
   </div>
   <br>
   <form id='hangman'>
     <input type="text" maxlength="1" minlength="1" name="letter" id="letter" placeholder="Guess a letter" >
     <input id="guess" name="guess" type="submit" value="Guess" >
-    <button id="restart" name="restart" type="button">Restart</button>
+    <button id="restart" name="restart" type="button" onClick="window.location.reload()" >Restart</button>
   </form>
   <br>
   <br>
