@@ -1,0 +1,14 @@
+
+ul, li {
+  margin-top: 100px;
+  display: inline;
+  padding-right: 35px;
+  color: white;
+  border-style: solid;
+  border-bottom-color: black;
+
+}
+
+.score {
+  display: flex;
+}
