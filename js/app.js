@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function(){
   // testing random words
 
   console.log('working')
-  var wordarray = ['march', 'test', 'football'];
+  var wordarray = ['march', 'cake', 'cpu'];
   var randomword = wordarray[Math.floor(Math.random() * wordarray.length)]
   var guessarray =['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
   var randomstoredword = [];
@@ -22,6 +22,12 @@ document.addEventListener('DOMContentLoaded', function(){
   var score = 10
   document.getElementById("scoreCounter").innerHTML = score
   randomlettersstored.push(randomswordletters)
+
+
+  var userinputstored=[];
+  userinputstored.push(document.getElementById("letter").value)
+  console.log(userinputstored);
+
 
   console.log(randomstoredword);
   console.log(randomword);
@@ -60,20 +66,15 @@ document.addEventListener('DOMContentLoaded', function(){
         console.log("score", score)
         document.getElementById("scoreCounter").innerHTML = score
       } else {
-
-
         console.log("awwww")
-
       }
     }
   });
 
-
-
-
-
       document.getElementById("restart").addEventListener("click", function(e){
           console.log('restart');
       });
+
+      //win condition
 
 })
