@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function(){
   // testing random words
 
   console.log('working')
-  var wordarray = ['linux', 'ctf', 'ram', 'hack', 'stuxnet'];
+  var wordarray = ['linux', 'ctf', 'ram', 'hack', 'virus'];
   var randomword = wordarray[Math.floor(Math.random() * wordarray.length)]
   var guessarray =['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
   var randomstoredword = [];
