@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded', function(){
   randomstoredword.push(randomword)
   var randomswordletters = randomword.split("")
   var randomlettersstored= [];
-  var Guesses = 5
-  document.getElementById("scoreCounter").innerHTML = Guesses
+  var score = 5
+  document.getElementById("scoreCounter").innerHTML = score
   randomlettersstored.push(randomswordletters)
 
 
@@ -63,13 +63,13 @@ document.addEventListener('DOMContentLoaded', function(){
         document.getElementById("list").children[colourKid].style.color = 'red';
       } if (!randomlettersstored[i].includes(value)) {
         alert('incorrectletter'),
-        Guesses--
-        console.log("score", Guesses)
+        score--
+        console.log("score", score)
         document.getElementById("scoreCounter").innerHTML = score
       } else {
         console.log("awwww")
       }
-    }if (Guesses===0){
+    }if (score===0){
       alert('unlucky, start another game')
     }
   });
