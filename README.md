@@ -1,6 +1,6 @@
 # Sparta-project-1
 ### Description
-The purpose of this project is to make a functioning game. 
+The purpose of this project is to make a functioning game. I attempted to make three games, only one of which functioned as intended. The first game attempted was a moving obstacle avoidance game, the second game was a maze, and finally the third game which works is hangman.
 
 ### Languages used
 * HTML
