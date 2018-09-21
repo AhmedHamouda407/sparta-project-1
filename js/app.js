@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function(){
           alert('well done, you win')
         }
       } if (!randomlettersstored[i].includes(value)) {
-        alert('incorrectletter'),
+        alert('wrong letter, try again'),
         score--
         console.log("score", score)
         document.getElementById("scoreCounter").innerHTML = score
