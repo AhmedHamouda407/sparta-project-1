@@ -50,17 +50,24 @@ document.addEventListener('DOMContentLoaded', function(){
     li.innerHTML= randomword[i];
     ul.appendChild(li);
   }
-//letter+output result, if correct, turn letter red
+  //letter+output result, if correct, turn letter red
+  let guessedWord = '';
   document.getElementById("hangman").addEventListener("submit", function(e){
     e.preventDefault();
     for(let i=0; i<randomlettersstored.length; i++){
       let value = document.getElementById("letter").value;
       console.log("letter value:", value)
       if(randomlettersstored[i].includes(value)){
+        guessedWord += value;
+        console.log('guessed word' + guessedWord);
         console.log("yaaay boiii");
         let colourKid = randomlettersstored[i].indexOf(value);
         console.log(colourKid)
         document.getElementById("list").children[colourKid].style.color = 'red';
+        if (guessedWord === randomword) {
+          console.log('winner');
+          alert('well done, you win')
+        }
       } if (!randomlettersstored[i].includes(value)) {
         alert('incorrectletter'),
         score--
@@ -74,10 +81,10 @@ document.addEventListener('DOMContentLoaded', function(){
     }
   });
 
-      document.getElementById("restart").addEventListener("click", function(e){
-          console.log('restart');
-      });
+  document.getElementById("restart").addEventListener("click", function(e){
+    console.log('restart');
+  });
 
-      //win condition
+  //win condition
 
 })
